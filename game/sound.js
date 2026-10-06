@@ -90,7 +90,7 @@ export class CinematicAudio {
       case 'mount-shot':this.bass(125,42,.24,.14);this.texture(.12,.12,3200,850);break;
       case 'freeze':this.texture(.48,.18,6800,1100);this.texture(.16,.12,11000,4200);this.bass(98,34,.25,.13);break;
       case 'freeze-shatter':this.texture(.13,.24,10000,1800);this.texture(.4,.1,5500,600,.025);this.bass(80,32,.18,.15);break;
-      case 'lightning':this.lightningShot();break;
+      case 'lightning':if(!this.lightningShot()){this.texture(.24,.13,5000,900,.01);this.bass(240,80,.22,.11);}break;
       case 'turret-shot':this.bass(100,38,.16,.045);this.texture(.08,.04,2500,650);break;
       case 'turret-upgrade':this.bass(95,145,.45,.05);this.texture(.2,.035,1800,600);break;
       case 'turret-destroyed':this.explosion(1.2,true);break;
